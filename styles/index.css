@@ -42,18 +42,14 @@ ul, ol {
             typing 4s steps(34, jump-end),
             blink-caret .75s step-end 7;
 }
-
-
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
 }
-
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: orange; }
 }
-
 
 #arenamap {
     font-family: "Ubuntu Mono", sans-serif;
@@ -64,4 +60,7 @@ ul, ol {
     margin: 0 33%;
     text-shadow: 3px 3px 3px darkgrey;
     /*letter-spacing: 2px;*/
+}
+#arenamap:hover {
+    transform: scale(1.2);
 }
