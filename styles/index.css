@@ -29,6 +29,14 @@
     gap: .5%;
 }
 
+#windows_center_arena_mode {
+    height: 100%;
+
+    display: none;
+    grid-template-rows: 7fr 3fr;
+    gap: .5%;
+}
+
 #windows_right {
     display: grid;
     background: white;
@@ -42,6 +50,17 @@
     text-align: center;
 
     background: var(--window_color);
+    color: var(--window_text_color);
+    font-size: var(--font-size);
+}
+
+.arena_window {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+    background: hsl(105, 80%, 19%);
     color: var(--window_text_color);
     font-size: var(--font-size);
 }
@@ -68,6 +87,16 @@
 
 #focus_win {
     /*background: lightgray;*/
+}
+
+#mode_button {
+    position: absolute;
+    width: 5%;
+
+    background: darkslateblue;
+    color: lightgray;
+    font-size: 8px;
+    font-weight: bold;
 }
 
 #activity_win {
