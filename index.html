@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Learning Project 2</title>
+    <title>Passage Webclient</title>
     <link href="styles/index.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Nova+Mono&family=Ubuntu+Mono&family=Xanh+Mono:ital@1&display=swap" rel="stylesheet">
     <script src="src/main.js" defer></script>
 </head>
 
@@ -14,41 +13,49 @@
 
 
 <header></header>
-
 <nav></nav>
 
-<main>
+<!-- TODO: rename this to template, and work on a minimal white version -->
+<main id="application">
 
-    <h1>temp title</h1>
-
-    <div class="textbody">
-        <p>Here is some random text</p>
-        <p>That I'm entering in an HTML body.</p>
-        <p>Let's see what <a href="https://www.zombo.com">happens</a> with it.</p>
-        <ul>
-            <li>This</li>
-            <li>Is</li>
-            <li>A very</li>
-            <li>Useless</li>
-            <li>List</li>
-        </ul>
+    <div id="windows_left">
+        <div id="descriptions_win" class="window">
+            <div class="tab"></div>
+            Descriptions
+            <span></span>
+        </div>
+        <div id="logs_win" class="window">
+            <div class="tab"></div>
+            Logs & Comms
+            <span></span>
+        </div>
     </div>
 
-    <p id="arenamap">
-        [][][][][][][][][][][][]<br>
-        []....................[]<br>
-        []....................[]<br>
-        []....................[]<br>
-        []....................[]<br>
-        []....................[]<br>
-        []....................[]<br>
-        []....................[]<br>
-        []....../\............[]<br>
-        []....................[]<br>
-        [][][][][][][][][][][][]<br>
-    </p>
+    <div id="center_container">
+        <div id="windows_center_adv_mode">
+            <div id="focus_win" class="window">
+                <span></span>
+                Focus
+                <span></span>
+            </div>
+            <div id="activity_win" class="window">
+                <span></span>
+                Activity
+                <span></span>
+            </div>
+            <div id="prompt_win" class="prompt_window">
+                Command Prompt>_
+            </div>
+        </div>
+    </div>
 
-    <button>Click Me</button>
+    <div id="windows_right">
+        <div id="lists_win" class="window">
+            <div class="tab"></div>
+            Lists
+            <span></span>
+        </div>
+    </div>
 
 </main>
 

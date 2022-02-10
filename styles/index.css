@@ -1,66 +1,90 @@
-html {
-    font-family: "Xanh Mono", sans-serif;
-    font-size: 20px;
-    /*text-align: center;*/
+:root {
+    --window_color: hsl(0, 0%, 15%, 1);
+    --window_text_color: hsl(0, 0%, 100%, 1);
+    --font-size: 2vw;
 }
 
-main {
-    width: 600px;
-    padding: 0 20px 20px 20px;
-    border: 5px solid black;
-    box-shadow: 3px 3px 3px darkgrey;
-    margin: 5% auto;
+#application {
+    /*width: 100%;*/
+    height: 100vh;
+    /*background: yellow;*/
+    display: grid;
+    grid-template-columns: 6fr 9fr 4fr;
+    gap: .3%;
 }
 
-h1 {
-    font-size: 60px;
-    padding: 20px 0;
-    margin: 0;
+#windows_left {
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-rows: 4fr 5fr;
+    gap: .5%;
+}
+
+#center_container {}
+
+#windows_center_adv_mode {
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 5fr 3fr 1fr;
+    gap: .5%;
+}
+
+#windows_right {
+    display: grid;
+    background: white;
+    /*grid-template-rows: 1fr;*/
+}
+
+.window {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
-    /*text-shadow: 6px 6px 12px darkgrey;*/
+
+    background: var(--window_color);
+    color: var(--window_text_color);
+    font-size: var(--font-size);
 }
 
-ul, ol {
-    margin: 20px 10px;
-    text-align: left;
-    line-height: 2;
-    letter-spacing: 3px;
+.prompt_window {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 2%;
+
+    background: #111;
+    color: var(--window_text_color);
+    font-size: var(--font-size);
 }
 
-.textbody {
-    margin: 20px 20px 20px 60px;
+
+#descriptions_win {
+    /*background: red;*/
 }
 
-.typewriter {
-    color: #999999;
-    overflow: hidden;
-    border-right: .15em solid transparent; /* cursor */
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .15em;
-    animation:
-            typing 4s steps(34, jump-end),
-            blink-caret .75s step-end 7;
-}
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange; }
+#logs_win {
+    /*background: red;*/
 }
 
-#arenamap {
-    font-family: "Ubuntu Mono", sans-serif;
-    font-size: 16px;
-    text-align: center;
-    padding: 0;
-    border: 0;
-    margin: 0 33%;
-    text-shadow: 3px 3px 3px darkgrey;
-    /*letter-spacing: 2px;*/
+#focus_win {
+    /*background: lightgray;*/
 }
-#arenamap:hover {
-    transform: scale(1.2);
+
+#activity_win {
+    /*background: lightgray;*/
+}
+
+#prompt_win {
+    /*background: darkgrey;*/
+}
+
+#lists_win {
+    /*background: blue;*/
+}
+
+.tab {
+    width: 100%;
+    height: .5em;
+    background: hsl(0, 100%, 100%, .10);
 }
