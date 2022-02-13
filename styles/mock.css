@@ -25,7 +25,7 @@ html {
     height: 98vh;
     margin: 1vh 0;
     display: grid;
-    grid-template-columns: 3.5fr 9fr 6.75fr;
+    grid-template-columns: 3.5fr 10fr 5fr;
     grid-template-rows: 4.5fr 1.5fr 1.5fr 1.5fr minmax(0, .8fr);
     background: var(--window_color);
 }
