@@ -1,0 +1,184 @@
+:root {
+    --window_color: hsl(0, 0%, 100%, 1);
+    --window_text_color: hsl(0, 0%, 35%, 1);
+    --resp-font-size: 2vw;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+#body {
+    font-size: 1.6rem;
+    color: #000;
+}
+
+#application {
+    font-size: 1.6rem;
+    height: 98vh;
+    display: grid;
+    grid-template-columns: 3.5fr 9fr 6.75fr;
+    grid-template-rows: 4.5fr 1.5fr 1.5fr 1.5fr minmax(0, 1.5fr);
+    gap: .3%;
+}
+
+.window {
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: var(--window_color);
+    color: var(--window_text_color);
+    /*border: 3px solid red;*/
+}
+
+.arena_window {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+
+    background: hsl(105, 80%, 19%);
+    color: var(--window_text_color);
+    /*font-size: var(--resp-font-size);*/
+}
+
+#lists_win {
+    grid-column: 1 / 2;
+    grid-row: 1 / 6;
+    font-size: 1.5rem;
+    /*background: blue;*/
+}
+
+#lists_win h3 {
+    margin: 1em 0 -.5em .5em
+}
+
+#lists_win p {
+    margin: 2em 0 2em 1em;
+}
+
+#focus_win {
+    grid-row: 1 / 3;
+    font-size: 3rem;
+    padding-top: 1em;
+    padding-right: 2em;
+    color: #000;
+    /*background: lightgray;*/
+}
+
+#arena_win {
+    display: none;
+    grid-row: 1 / 4;
+    font-size: 2.2rem;
+    /*background: lightgray;*/
+}
+
+#mode_button {
+    display: none;
+    font-size: .75em;
+    position: absolute;
+    top: 15px;
+    left: 19vw;
+    width: 9em;
+
+    background: darkslateblue;
+    color: lightgray;
+    font-weight: bold;
+}
+
+#activity_win {
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+    font-size: 2.5rem;
+    /*background: lightgray;*/
+}
+
+#activity_win span {
+    color: hsl(0, 0%, 35%, .5);
+}
+
+#activity_win .recent-activity {
+    color: #444;
+    text-shadow: 2px 2px 3px lightblue;
+}
+
+#aactivity_win {
+    display: none;
+    grid-column: 2 / 3;
+    grid-row: 4 / 6;
+    font-size: 2.2rem;
+    /*background: lightgray;*/
+}
+
+#prompt_win {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    font-size: 1.2rem;
+    padding: 0 2%;
+
+    background: #ddd;
+    color: var(--window_text_color);
+    border-radius: 25px;
+    /*border: 3px solid red;*/
+}
+
+#prompt_output {
+    height: 7em;
+    overflow: auto;
+    /*border: 2px solid orange;*/
+}
+
+#prompt_title {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 20px;
+    width: 43vw;
+
+    /*border: 2px solid orange;*/
+}
+
+#prompt_input {
+    width: 95%;
+}
+
+#descriptions_win {
+    grid-column: 3 / 4;
+    font-size: 2rem;
+    height: 100%;
+    padding-left: 10%;
+    /*background: red;*/
+}
+
+#logs_win {
+    grid-column: 3 / 4;
+    grid-row: 2 / 6;
+    font-size: 1.5rem;
+    padding-left: 10%;
+    /*background: red;*/
+}
+
+.tab {
+    font-size: .75em;
+    margin: 0;
+    width: fit-content;
+    height: 2em;
+    background: linear-gradient(to right, #fff, #ddd, #ddd, #fff);
+    color: #888;
+    border-radius: 25px;
+    padding: .4em 10em 0 1em;
+}
+
+.tab-title {
+    margin: 0 5em 0 0;
+}
+
+h1 {
+    margin: 0;
+}
+h2 {
+    margin: 0;
+}
+h3 {
+    margin: 0;
+}
