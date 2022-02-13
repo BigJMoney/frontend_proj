@@ -1,6 +1,7 @@
 :root {
-    --window_color: hsl(0, 0%, 100%, 1);
+    --window_color: hsl(0, 0%, 90%, 1);
     --window_text_color: hsl(0, 0%, 35%, 1);
+    --window-overlay-color: hsl(0, 0%, 85%, 1);
     --resp-font-size: 2vw;
 }
 
@@ -19,34 +20,44 @@ html {
     display: grid;
     grid-template-columns: 3.5fr 9fr 6.75fr;
     grid-template-rows: 4.5fr 1.5fr 1.5fr 1.5fr minmax(0, 1.5fr);
-    gap: .3%;
+    background: var(--window_color);
 }
 
-.window {
-    flex-direction: column;
-    justify-content: space-between;
-
+.app-window {
     background: var(--window_color);
     color: var(--window_text_color);
+    padding: 2em;
+
     /*border: 3px solid red;*/
 }
 
-.arena_window {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-
-    background: hsl(105, 80%, 19%);
-    color: var(--window_text_color);
-    /*font-size: var(--resp-font-size);*/
+.window-content {
+    padding: 1rem;
 }
+
+.central-window {
+    background: white;
+    color: black;
+    padding: .8em;
+    box-shadow: 3px 3px 3px black;
+    z-index: 2;
+}
+
+/*.arena_window {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: space-between;*/
+/*    text-align: center;*/
+
+/*    background: hsl(105, 80%, 19%);*/
+/*    color: var(--window_text_color);*/
+/*    !*font-size: var(--resp-font-size);*!*/
+/*}*/
 
 #lists_win {
     grid-column: 1 / 2;
     grid-row: 1 / 6;
     font-size: 1.5rem;
-    /*background: blue;*/
 }
 
 #lists_win h3 {
@@ -60,17 +71,17 @@ html {
 #focus_win {
     grid-row: 1 / 3;
     font-size: 3rem;
-    padding-top: 1em;
-    padding-right: 2em;
-    color: #000;
-    /*background: lightgray;*/
+
+    margin-top: 30px;
+    padding-bottom: 0;
 }
 
 #arena_win {
     display: none;
     grid-row: 1 / 4;
     font-size: 2.2rem;
-    /*background: lightgray;*/
+
+    margin-top: 30px;
 }
 
 #mode_button {
@@ -90,7 +101,9 @@ html {
     grid-column: 2 / 3;
     grid-row: 3 / 5;
     font-size: 2.5rem;
-    /*background: lightgray;*/
+
+    margin-bottom: 20px;
+    padding-top: 0;
 }
 
 #activity_win span {
@@ -116,7 +129,7 @@ html {
     font-size: 1.2rem;
     padding: 0 2%;
 
-    background: #ddd;
+    background: var(--window-overlay-color);
     color: var(--window_text_color);
     border-radius: 25px;
     /*border: 3px solid red;*/
@@ -145,32 +158,35 @@ html {
 #descriptions_win {
     grid-column: 3 / 4;
     font-size: 2rem;
-    height: 100%;
-    padding-left: 10%;
-    /*background: red;*/
+    /*height: 100%;*/
 }
 
 #logs_win {
     grid-column: 3 / 4;
     grid-row: 2 / 6;
     font-size: 1.5rem;
-    padding-left: 10%;
-    /*background: red;*/
 }
 
 .tab {
-    font-size: .75em;
+    font-size: 1rem;
     margin: 0;
     width: fit-content;
-    height: 2em;
-    background: linear-gradient(to right, #fff, #ddd, #ddd, #fff);
-    color: #888;
-    border-radius: 25px;
-    padding: .4em 10em 0 1em;
+    max-width: 100%;
+    height: 20px;
+    background: var(--window-overlay-color);
+    border-radius: 8px;
+    padding: .4em 0 0 2em;
 }
 
 .tab-title {
-    margin: 0 5em 0 0;
+    margin: 0 2em 0 0;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.tab-activetitle {
+    text-shadow: 1px 1px 1px skyblue;
+    color: #444;
 }
 
 h1 {

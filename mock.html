@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Passage Webclient Mock</title>
-    <link href="styles/scratch.css" rel="stylesheet">
+    <link href="styles/mock.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="src/scratch.js" defer></script>
+<!--    <script src="src/mock.js" defer></script>-->
 </head>
 
 
@@ -16,36 +16,37 @@
 <main id="application">
 
     <!--First columm of windows-->
-    <div id="lists_win" class="window">
-        <div class="tab"><span class="tab-title">Room</span><span class="tab-title">Inventory</span></div>
-        <h2>Room</h2>
-        <h3>Characters</h3>
-        <p>Homsar</p>
-        <p>Raisse</p>
-        <h3>Objects</h3>
-        <p>chair</p>
-        <p>corpse of a coach z</p>
-        <h3>Exits</h3>
-        <p>out (outside)</p>
-        <p>up (a ladder)</p>
-        <span></span>
+    <div id="lists_win" class="app-window">
+        <div class="tab"><span class="tab-title tab-activetitle">Room</span><span class="tab-title">Inventory</span></div>
+        <div class="window-content">
+            <h3>Characters</h3>
+            <p>Homsar</p>
+            <p>Raisse</p>
+            <h3>Objects</h3>
+            <p>old chair</p>
+            <p>corpse of a coach z</p>
+            <h3>Exits</h3>
+            <p>out (outside)</p>
+            <p>up (a ladder)</p>
+        </div>
     </div>
 
     <!--Second column of windows-->
     <!--Adventure Mode-->
     <button id="mode_button">Toggle Mode</button>  <!--Currently hidden-->
 
-    <div id="focus_win" class="window">
-        <span></span>
+    <div id="focus_win" class="app-window central-window">
         <h2>Small cottage</h2>
-        <p>The humble cottage of Homsar. There's not much to see, really. And that's why it's a great place to demo a MUD webclient layout. Yep. Alllll thanks to that Homsar guy. What a lad.</p>
-        <span></span>
+        <p>The humble cottage of Homsar. There's not much to see, really. And that's why it's a great place to demo
+            a MUD webclient layout. Yep. Alllll thanks to that Homsar guy. What a lad.</p>
     </div>
 
-    <div id="activity_win" class="window">
+    <div id="activity_win" class="app-window central-window">
         <span></span>
         <hr>
-        <p><span>Homsar enters the small cottage from outside. </span><span>Homsar leaves the small cottage for outside. </span><span class="recent-activity">Homsar enters the small cottage from outside. </span></p>
+        <p><span>Homsar enters the small cottage from outside. </span><span>Homsar leaves the small cottage for outside.
+        </span><span class="recent-activity">Homsar enters the small cottage from outside. </span></p>
+
     </div>
 
     <div id="prompt_win" class="prompt_window">
@@ -68,31 +69,37 @@
 
     <!--Arena Mode-->
     <div id="arena_win" class="arena_window">
-        <span></span>
         <h2>Arena</h2>
-        <span></span>
     </div>
     <div id="aactivity_win" class="arena_window">
-        <span></span>
         <h2>Activity</h2>
-        <span></span>
     </div>
 
     <!--Third column of windows-->
-    <div id="descriptions_win" class="window">
-        <div class="tab"></div>
-        <h3>The last thing</h3>
-        <p>Here is a description of the last thing you looked at. Let's pretend that it was quite interesting.</p>
-        <span></span>
+    <div id="descriptions_win" class="app-window">
+        <div class="tab">
+            <span class="tab-title tab-activetitle">Object</span>
+            <span class="tab-title">Area</span>
+        </div>
+        <div class="window-content"><h3>Old chair</h3>
+            <p>This chair is run down, and pieces of stuffing leak from worn spots. But it still looks
+            quite comfortable.</p>
+        </div>
     </div>
 
-    <div id="logs_win" class="window">
-        <div class="tab"><span class="tab-title">Local Talk</span><span class="tab-title">OOC</span><span class="tab-title">Pages</span><span class="tab-title">System</span></div>
-        <h3>Local talk</h3>
-        <p>Homestar says, "I guess this isn't so bad. I mean, there could be... a dwagon."</p>
-        <p>Strongbad says, "Don't be a dumb. We all know there aren't any drwaaaaaagons left alive today. That was only in ancienty times."</p>
-        <p>Strongbad mumblescreams, "DWWAAAAADUUUUUUUUUUUUUHHHHHHH"</p>
-        <span></span>
+    <div id="logs_win" class="app-window">
+        <div class="tab">
+            <span class="tab-title tab-activetitle">Local Talk</span>
+            <span class="tab-title">OOC</span>
+            <span class="tab-title">Pages</span>
+            <span class="tab-title">System</span>
+        </div>
+        <div class="window-content">
+            <p>Homestar says, "I guess this isn't so bad. I mean, there could be... a dwagon."</p>
+            <p>Strongbad says, "Don't be a dumb. We all know there aren't any drwaaaaaagons left alive today. That was
+                only in ancienty times."</p>
+            <p>Strongmad mumble-screams, "DWWAAAAADUUUUUUUUUUUUUHHHHHHH!"</p>
+        </div>
     </div>
 
 </main>
