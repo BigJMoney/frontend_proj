@@ -9,69 +9,55 @@
     <script src="src/main.js" defer></script>
 </head>
 
-<body>
 
+<body id="body">
 
-<header></header>
-<nav></nav>
-
-<!-- TODO: add a small footer so the page doesn't go offscreen -->
 <!-- TODO: rename this to template, and work on a minimal white version -->
 <main id="application">
 
-    <div id="windows_left">
-        <div id="descriptions_win" class="window">
-            <div class="tab"></div>
-            Descriptions
-            <span></span>
-        </div>
-        <div id="logs_win" class="window">
-            <div class="tab"></div>
-            Logs & Comms
-            <span></span>
-        </div>
+    <div id="descriptions_win" class="window">
+        <div class="tab"></div>
+        <h2>Descriptions</h2>
+        <span></span>
+    </div>
+    <div id="logs_win" class="window">
+        <div class="tab"></div>
+        <h2>Logs & Comms</h2>
+        <span></span>
     </div>
 
-    <div id="center_container">
-        <button id="mode_button">Toggle Mode</button>
-        <div id="windows_center_adv_mode">
-            <div id="focus_win" class="window">
-                <span></span>
-                Focus
-                <span></span>
-            </div>
-            <div id="activity_win" class="window">
-                <span></span>
-                Activity
-                <span></span>
-            </div>
-            <div id="prompt_win" class="prompt_window">
-                Command Prompt>_
-            </div>
-        </div>
-        <div id="windows_center_arena_mode">
-            <div id="arena_win" class="arena_window">
-                <span></span>
-                Arena
-                <span></span>
-            </div>
-            <div id="aactivity_win" class="arena_window">
-                <span></span>
-                Activity
-                <span></span>
-            </div>
-        </div>
+    <button id="mode_button">Toggle Mode</button>
+
+    <div id="focus_win" class="window">
+        <span></span>
+        <h2>Focus</h2>
+        <span></span>
+    </div>
+    <div id="activity_win" class="window">
+        <span></span>
+        <h2>Activity</h2>
+        <span></span>
+    </div>
+    <div id="prompt_win" class="prompt_window">
+        <h2 id="prompt_title">Command Prompt>_</h2>
     </div>
 
-    <div id="windows_right">
-        <div id="lists_win" class="window">
-            <div class="tab"></div>
-            Lists
-            <span></span>
-        </div>
+    <div id="arena_win" class="arena_window">
+        <span></span>
+        <h2>Arena</h2>
+        <span></span>
+    </div>
+    <div id="aactivity_win" class="arena_window">
+        <span></span>
+        <h2>Activity</h2>
+        <span></span>
     </div>
 
-    <footer></footer>
+    <div id="lists_win" class="window">
+        <div class="tab"></div>
+        <h2>Lists</h2>
+        <span></span>
+    </div>
 
 </main>
 

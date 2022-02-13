@@ -1,46 +1,24 @@
 :root {
     --window_color: hsl(0, 0%, 15%, 1);
     --window_text_color: hsl(0, 0%, 100%, 1);
-    --font-size: 2vw;
+    --resp-font-size: 2vw;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+#body {
+    font-size: 1.6rem;
 }
 
 #application {
-    height: 100vh;
+    font-size: 1.6rem;
+    height: 98vh;
     display: grid;
-    grid-template-columns: 6fr 9fr 4fr;
-    grid-template-rows: 138fr 2fr;
+    grid-template-columns: 4fr 9fr 6.75fr;
+    grid-template-rows: 4.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
     gap: .3%;
-}
-
-#windows_left {
-    grid-column: 1 / 2;
-    display: grid;
-    grid-template-rows: 4fr 5fr;
-    gap: .5%;
-}
-
-#center_container {}
-
-#windows_center_adv_mode {
-    height: 100%;
-
-    display: grid;
-    grid-template-rows: 5fr 3fr 1fr;
-    gap: .5%;
-}
-
-#windows_center_arena_mode {
-    height: 100%;
-
-    display: none;
-    grid-template-rows: 7fr 3fr;
-    gap: .5%;
-}
-
-#windows_right {
-    display: grid;
-    background: white;
-    /*grid-template-rows: 1fr;*/
 }
 
 .window {
@@ -51,7 +29,7 @@
 
     background: var(--window_color);
     color: var(--window_text_color);
-    font-size: var(--font-size);
+    /*font-size: var(--resp-font-size);*/
 }
 
 .arena_window {
@@ -62,56 +40,90 @@
 
     background: hsl(105, 80%, 19%);
     color: var(--window_text_color);
-    font-size: var(--font-size);
+    /*font-size: var(--resp-font-size);*/
 }
-
-.prompt_window {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    padding: 2%;
-
-    background: #111;
-    color: var(--window_text_color);
-    font-size: var(--font-size);
-}
-
 
 #descriptions_win {
+    grid-column: 3 / 4;
+    font-size: 2.2rem;
+    height: 100%;
     /*background: red;*/
 }
 
 #logs_win {
+    grid-column: 3 / 4;
+    grid-row: 2 / 6;
+    font-size: 2.2rem;
     /*background: red;*/
 }
 
 #focus_win {
+    grid-row: 1 / 3;
+    font-size: 2.2rem;
+    /*background: lightgray;*/
+}
+
+#arena_win {
+    display: none;
+    grid-row: 1 / 4;
+    font-size: 2.2rem;
     /*background: lightgray;*/
 }
 
 #mode_button {
+    font-size: .75em;
     position: absolute;
-    width: 5%;
+    top: 15px;
+    left: 21vw;
+    width: 9em;
 
     background: darkslateblue;
     color: lightgray;
-    font-size: 8px;
     font-weight: bold;
 }
 
 #activity_win {
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+    font-size: 2.2rem;
+    /*background: lightgray;*/
+}
+
+#aactivity_win {
+    display: none;
+    grid-column: 2 / 3;
+    grid-row: 4 / 6;
+    font-size: 2.2rem;
     /*background: lightgray;*/
 }
 
 #prompt_win {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    font-size: 1.5rem;
     /*background: darkgrey;*/
+    padding: 0 2%;
+
+    background: #111;
+    color: var(--window_text_color);
+}
+
+#prompt_title {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 20px;
 }
 
 #lists_win {
+    grid-column: 1 / 2;
+    grid-row: 1 / 6;
+    font-size: 2.2rem;
     /*background: blue;*/
 }
 
 .tab {
+    font-size: 2em;
     width: 100%;
     height: .5em;
     background: hsl(0, 100%, 100%, .10);
