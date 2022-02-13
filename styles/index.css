@@ -16,7 +16,7 @@ html {
     font-size: 1.6rem;
     height: 98vh;
     display: grid;
-    grid-template-columns: 4fr 9fr 6.75fr;
+    grid-template-columns: 3.5fr 9fr 6.75fr;
     grid-template-rows: 4.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
     gap: .3%;
 }
