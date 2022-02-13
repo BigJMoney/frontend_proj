@@ -1,46 +1,56 @@
 :root {
-    --window_color: hsl(0, 0%, 90%, 1);
-    --window_text_color: hsl(0, 0%, 35%, 1);
-    --window-overlay-color: hsl(0, 0%, 85%, 1);
+    --col: 60;
+    --window_color: hsl(var(--col), 20%, 96%, 1);
+    --window_text_color: hsl(var(--col), 15%, 30%, 1);
+    --window-overlay-color: hsl(var(--col), 5%, 88%, 1);
     --resp-font-size: 2vw;
 }
 
 html {
     font-size: 62.5%;
+    background: var(--window_color);
+    font-family: "Cutive Mono", monospace;
 }
 
 #body {
     font-size: 1.6rem;
-    color: #000;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 #application {
     font-size: 1.6rem;
+    width: 100%;
     height: 98vh;
+    margin: 1vh 0;
     display: grid;
     grid-template-columns: 3.5fr 9fr 6.75fr;
-    grid-template-rows: 4.5fr 1.5fr 1.5fr 1.5fr minmax(0, 1.5fr);
+    grid-template-rows: 4.5fr 1.5fr 1.5fr 1.5fr minmax(0, .8fr);
     background: var(--window_color);
 }
 
 .app-window {
     background: var(--window_color);
     color: var(--window_text_color);
-    padding: 2em;
+    margin: 0;
+    padding: 2.5rem;
 
     /*border: 3px solid red;*/
 }
 
 .window-content {
-    padding: 1rem;
+    padding: .8em;
+    background-color: var(--window-overlay-color);
 }
 
 .central-window {
-    background: white;
+    background: #fff;
     color: black;
     padding: .8em;
-    box-shadow: 3px 3px 3px black;
+    box-shadow: 3px 3px 3px hsl(240, 15%, 40%, 1);
     z-index: 2;
+    border: 1px solid lightblue;
 }
 
 /*.arena_window {*/
@@ -58,6 +68,7 @@ html {
     grid-column: 1 / 2;
     grid-row: 1 / 6;
     font-size: 1.5rem;
+    padding-left: 0;
 }
 
 #lists_win h3 {
@@ -74,6 +85,11 @@ html {
 
     margin-top: 30px;
     padding-bottom: 0;
+
+    font-family: "Xanh Mono", monospace;
+    background: url("/assets/kiwihug-MS9Tnh3if1o-unsplash2.jpg");
+    background-size: 900px;
+    border-bottom: none;
 }
 
 #arena_win {
@@ -104,6 +120,7 @@ html {
 
     margin-bottom: 20px;
     padding-top: 0;
+    border-top: none;
 }
 
 #activity_win span {
@@ -123,6 +140,7 @@ html {
     /*background: lightgray;*/
 }
 
+/* TODO: make the prompt more minimalist but larger text*/
 #prompt_win {
     grid-column: 2 / 3;
     grid-row: 5 / 6;
@@ -136,8 +154,8 @@ html {
 }
 
 #prompt_output {
-    height: 7em;
-    overflow: auto;
+    height: 2em;
+    overflow: clip;
     /*border: 2px solid orange;*/
 }
 
@@ -158,15 +176,17 @@ html {
 #descriptions_win {
     grid-column: 3 / 4;
     font-size: 2rem;
-    /*height: 100%;*/
+    padding-right: 0;
 }
 
 #logs_win {
     grid-column: 3 / 4;
     grid-row: 2 / 6;
     font-size: 1.5rem;
+    padding-right: 0;
 }
 
+/* todo: make this a grid so that it can overflow to a new row when needed*/
 .tab {
     font-size: 1rem;
     margin: 0;
@@ -174,7 +194,7 @@ html {
     max-width: 100%;
     height: 20px;
     background: var(--window-overlay-color);
-    border-radius: 8px;
+    /*border-radius: 8px;*/
     padding: .4em 0 0 2em;
 }
 

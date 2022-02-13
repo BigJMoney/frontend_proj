@@ -6,18 +6,23 @@
     <link href="styles/mock.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Nova+Mono&family=Ubuntu+Mono&family=Xanh+Mono&display=swap" rel="stylesheet">
 <!--    <script src="src/mock.js" defer></script>-->
 </head>
 
 
 <body id="body">
 
-<!-- TODO: reorder the modules to reflect their actual order on the page -->
+<!--todo: rewrite the text to be more like a real mud-->
 <main id="application">
 
     <!--First columm of windows-->
     <div id="lists_win" class="app-window">
-        <div class="tab"><span class="tab-title tab-activetitle">Room</span><span class="tab-title">Inventory</span></div>
+        <div class="tab">
+            <span class="tab-title tab-activetitle">Room</span>
+            <span class="tab-title">Inventory</span>
+            <span class="tab-title">Commands</span>
+        </div>
         <div class="window-content">
             <h3>Characters</h3>
             <p>Homsar</p>
@@ -33,6 +38,7 @@
 
     <!--Second column of windows-->
     <!--Adventure Mode-->
+    <!-- TODO: Add the mode button -->
     <button id="mode_button">Toggle Mode</button>  <!--Currently hidden-->
 
     <div id="focus_win" class="app-window central-window">
@@ -45,22 +51,13 @@
         <span></span>
         <hr>
         <p><span>Homsar enters the small cottage from outside. </span><span>Homsar leaves the small cottage for outside.
-        </span><span class="recent-activity">Homsar enters the small cottage from outside. </span></p>
+        </span><span>You look at the chair. </span><span class="recent-activity">Homsar enters the small cottage from outside. </span></p>
 
     </div>
 
     <div id="prompt_win" class="prompt_window">
         <div id="prompt_output">
-            <p>Test is a command response.</p>
-            <p>How about another command response?</p>
-            <p>Third time is the charm.</p>
-            <p>More test output</p>
-            <p>Test output</p>
-            <p>Test output</p>
-            <p>Test output</p>
-            <p>Test output</p>
-            <p>Test output</p>
-            <p>Test output</p>
+            <p>Command 'whatsarobut' not understood.</p>
         </div>
         <label id="prompt_title">>_
             <input id="prompt_input" type="text">
@@ -68,6 +65,7 @@
     </div>
 
     <!--Arena Mode-->
+    <!-- TODO: Make a mock for this -->
     <div id="arena_win" class="arena_window">
         <h2>Arena</h2>
     </div>
